@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>逻辑操作符</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    逻辑操作符 与
+</body>
+</html>
+<script>
+    var num1 = 10,
+        num2 = 20,
+        num3 = 30,
+        str = "welcome",
+        bool = true,
+        n = null,
+        m;
+   // console.log(num1 < num2 && num2 < num3);  //true
+
+   // console.log(num1 < num2 && num2 == num3); //false  //所以条件都为true才返回true
+
+    // console.log(num1 < num3 && num3 > num1 && false);
+
+    console.log(str && num3);//30  //"" fasle 其他都true，0 false 其他都true
+
+    console.log(80 && 55);  //55
+
+    console.log("hello" && 65 && "abc"); //abc
+
+    console.log(0 && 88);   //0
+
+    console.log("" && 0 && 30 > 20);  //空 
+
+    console.log(n && num3);  //null
+
+    console.log(33 * "abc" && 55); //NaN
+    console.log(55 && true && 33 * "abc"); //NaN
+    console.log(m && true)  //undefined
+
+</script>

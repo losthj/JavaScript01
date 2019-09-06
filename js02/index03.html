@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>循环语句</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        for循环 、嵌套、while
+    </div>
+    <button onclick="myFunction()">forIn</button>
+    <div id="demo"></div>
+</body>
+</html>
+<script>
+    //1-100
+    //循环的初始值   //循环条件  （条件不成立退出循环）  //变量的变化 -> 最后执行操作
+    //for (var i = 1; i <= 100;i++){
+    //    document.write(i+'<br />')
+    //}
+
+    //输出99 92 95..3 1
+    //for (var m = 99; m >= 1;m-=2){
+    //    console.log(m)
+    //}
+    //alert(m)  //-1
+
+    //for in
+    function myFunction() {
+        var x;
+       
+        var txt = "";
+        var person = { fname: "Bill", lname: "Gates", age: 56 };
+        for (x in person) {
+            txt = txt + person[x];
+        }
+        document.getElementById("demo").innerHTML = txt;
+        console.log(x)
+    }
+
+    //嵌套
+    //1 12345 //2 12345 //3 12345
+    //for (var i = 1; i <= 3; i++) {
+    //    document.write(i + '<br />');   //1           2          3
+    //    //document.write("<hr />")
+    //    for (var j = 1; j <= 5; j++) {   
+    //        document.write(j + '<br />');          //1 2 3 4 5   1 2 3 4 5  12345
+    //    }
+    //}
+
+
+    //while   需要声明初始值
+    //var i = 1;
+    //while(i<=100){
+    //    document.write(i + "<br />");
+    //    i++;  //i+=1;
+    //}
+
+    //do while
+    //var j = 1;
+    //do {
+    //    if (j % 2 == 0) {  //偶数
+    //        console.log(j);
+    //    }
+    //    j++;
+
+    //} while (j <= 10);
+
+
+    //1+2+3+...+100=?
+    var sum = 0;   //sum和   //sum = 0+1 sum = 0+1+2 sum=0+1+2+3  ...
+    var n = 1;
+    while(n <=100){
+        sum += n;  //sum = sum +n;
+        n++;
+    }
+    console.log(sum);
+
+
+</script>

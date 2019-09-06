@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>函数</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>函数 、 arguments</div>
+</body>
+</html>
+<script>
+    //声明一个函数
+    function myFun() {
+        alert('我是一个函数')
+    }
+    //函数的调用
+   // myFun();
+
+    //声明一个带有参数的函数
+    //function add(num1, num2) {
+    //    var sum = num1 + num2;
+    //    alert(num1 + '和' + num2 + '的和是' + sum);
+    //}
+    //add(3, 5);
+
+    //add(99, 789);
+
+    //add(-1, -9);
+
+    //带返回值
+    //function add(num1, num2) {
+    //    var sum = num1 + num2;
+    //    return sum;
+    //}
+    //console.log(add(3, 5));
+
+    //alert(add(99, 789));
+
+    //var s = add(-1, -9);
+
+    //console.log(s);
+    //document.write('-1+ -9 =' + s);
+
+    //function myFunction(arg) {
+    //    //如果arg是非数字，不做任何操作
+    //    if (isNaN(arg)) return;
+    //    return arg * 2;
+    //}
+
+    //console.log(myFunction(40));
+
+
+    //arguments
+    function inner() {
+        //arguments
+        console.log(arguments.length);
+        console.log(arguments[1])  //索引是从0开始的正整数
+
+    }   
+    //inner(10, 5)
+    function add(num1, num2) {
+        arguments[0] = 99;
+        console.log(num1);  //99
+    }
+    //add(55, 88)
+
+    //求任意一组数的平均值
+    function getAvg() {
+        //console.log(arguments.length)
+        //多所有参数进行求和
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+           // console.log(arguments[i])
+            sum += arguments[i];
+           
+        }
+        // console.log(sum)
+        return sum / arguments.length;
+    }
+    var avg = getAvg(5, 66, 45, 32, 88, 24)
+    console.log(avg);
+    
+</script>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>breat与continue</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //var num = 0;
+    //for (var i = 1; i < 10;i++){
+    //    //如果i是5的倍数，就退出
+    //    if (i % 5 == 0) {
+    //        //break;
+    //        continue;
+    //    }
+    //    num++;
+    //    //console.log(i)  //1 2 3 4 
+    //    //console.log(i)  //1 2 3 4 6 7 8 9
+    //}
+    // console.log(num)  //8
+
+    for (var s = 0, j = 1; j <= 10; j++) {
+        if (j % 5 == 0) {
+            //  break
+            continue;
+        }
+        s += j;
+        //j=1,s=1;j=2,s=3;j=3,s=6;j=4,s=10,j=5
+        //
+    }
+    console.log(s);
+
+    //打印所有0-50之间除20和30之外的5的倍数
+    for (var n = 0; n <= 50; n += 5) {
+        if (n == 20 || n == 30) {
+            continue
+        }
+        console.log(n)
+    }
+</script>

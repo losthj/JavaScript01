@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>swith输出星期</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p>swith输出星期</p>
+    
+</body>
+</html>
+<script>
+    var week = new Date().getDay();
+    console.log(week);
+
+    var weekstr = "";
+
+    //多条件的判断 switch
+    switch(week){
+        case 0:
+            weekstr = "日";
+            break;   //退出
+        case 1:
+            weekstr = "一";
+            break;
+        case 2:
+            weekstr = "二";
+            break;
+        case 3:
+            weekstr = "三";
+            break;
+        case 4:
+            weekstr = "四";
+            break;
+        case 5:
+            weekstr = "五";
+            break;
+        default:
+            weekstr = "六";     
+    }
+    document.write("今天是星期" + weekstr);
+</script>

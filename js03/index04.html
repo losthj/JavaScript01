@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>javascript中string的方法</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        字符串对象的方法<br />
+        charAt()与charCodeAt() <br />
+        <br />
+        字符串对象的截取方法<br />
+        slice()<br />
+        substring()<br />
+        substr()<br />
+        <br />
+        字符串对象方法<br />
+        split()<br />
+        replace()<br />
+        <br />
+        字符串方法的其他方法<br />
+        toUpperCase()<br />
+        toLowerCase()
+
+
+    </div>
+</body>
+</html>
+<script>
+  //  var str = "hello world";
+    //console.log(str[1]) //不推荐使用
+    //console.log(str.charAt(13));  //取不到  返回 空
+    //console.log(str.charCodeAt(4));  //o
+
+    //var email = "huangjian@qq.com";
+    //console.log(email.indexOf("@"));  //9
+    //console.log(email.lastIndexOf("."));
+
+    //截取orl
+   // var str = "hello world";
+    //console.log(str.slice(7, 10));
+    //console.log(str.slice(1));
+    //console.log(str.slice(1, 3));
+    ////str.slice(8)  //11+(-3)=8
+    //console.log(str.slice(-3));
+    
+    //console.log(str.slice(1, 4));
+    //console.log(str.substring(1, 4));
+    //console.log(str.slice(-7, 5));  //o
+    //console.log(str.substring(-7, 5)); //(0,5)
+    //console.log(str.substring(-4, -7)); //空
+    //console.log(str.substring(2, -5)); //(0,2)自动转换成
+
+    //console.log(str.substring(6, 9));
+    //console.log(str.substr(6, 3));
+    //console.log(str.substr(-5, 4)); //(6,4)
+    //console.log(str.substr(6, -4)); //空
+
+    //获取拓展名
+    //var url = "http://baidu.com/index.txt";
+    //function getFileFormat(url) {
+    //    //获取在url中出现的位置
+    //    var pos = url.lastIndexOf(".");
+    //    //console.log(url.slice(22))
+    //    return url.substr(pos);
+    //}
+
+    //var formatName = getFileFormat(url);
+    //var picForamt = getFileFormat("123123123.jpg")
+    //console.log(formatName)
+    //console.log(picForamt)
+
+    //var str = 'welcome-to-beijing';
+    ////使用split将str转换为数组
+    //var arr = str.split("-");
+    //console.log(arr);
+    //var date = '2016/05/05';
+    //var dataArr = date.split("/");
+    //console.log(dataArr);
+
+    ////替换
+    //var tel = "010-62971268,400-100-9098,010-86789889";
+    ////newTel被替换之后的字符串
+    //var newTel = tel.replace(",", " ");
+    //console.log(newTel)
+
+    var str = "hello world";
+    //console.log(str.toUpperCase());
+    var upper = str.charAt(6).toUpperCase();
+    //console.log(upper);
+
+    var str2 = "WELCOME";
+    //console.log(str2.toLowerCase());
+
+    //border-left-color borderLeftColor
+    //margin-bottom 
+    function cameback(str) {
+        //通过-分隔符讲str拆分数组
+        var arr = str.split("-"), newstr=arr[0];
+        for (var i = 1, len = arr.length; i < len; i++) {
+            var world = arr[i];
+            //将每个单词的首字母转成大写,连接剩余字符
+            newstr += world.charAt(0).toUpperCase() + world.substr(1);
+            // console.log(newstr)  //Left Color  L C
+        }
+        return newstr;
+    }
+   // var cameFormat = cameback("border-left-color");
+    var cameFormat = cameback("get-element-by-id");
+    console.log(cameFormat)
+</script>

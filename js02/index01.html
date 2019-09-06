@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    if语句
+</body>
+</html>
+<script>
+    //var age = 15;
+    //if (age < 18) {
+    //    alert("您还没有成年");
+    //} 
+
+   // var age = prompt("请输入您的年龄");
+    //if(age < 18){
+    //    alert('您还没有成年');
+    //}else{
+    //     alert("你已成年")
+    //}
+    //console.log(age);
+
+    //if(age < 18){
+    //    alert('您还没有成年');
+    //}else if(age>=18 && age <=59){
+    //    alert('您已成年,可以进入');
+    //}else{
+    //    alert("您已超出年龄限制")
+    //}
+
+    //var password = prompt("请设置你的密码");
+
+    ////判断密码的长度，如果不是6位，否则
+    //if (password.length != 6){
+    //    alert("请输入6位数字密码！");
+    //}else{
+    //    //如果密码是非数字，否则就是数字
+    //    if (isNaN(password)) {   //isNaN(password) 等于isNaN(password) == true
+    //        alert("密码必须是数字！");
+    //    }else{
+    //        alert("密码设置正确！");
+    //    }
+    //}
+
+    var str = "abc123";
+    var num = parseInt(str);
+    if (num == NaN) {   //NaN和如何内容都不相等
+        alert(NaN)
+    } else if (num == 123) {
+        alert(123)
+    } else if (typeof num == "number") {
+        alert("num");
+    } else {
+        alert("str")
+    }
+</script>

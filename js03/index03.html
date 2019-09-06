@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>splice</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        splice方法  删除、插入、替换 ,indexOf(),lastIndexOf()
+
+    </div>
+</body>
+</html>
+<script>
+   // var arr = ["a", "b", "c", "d", "e", "f"];
+    //删除
+    //var delArr = arr.splice(2, 4);
+    //console.log(arr);
+    //console.log(delArr)
+    //插入
+    //var insertArr = arr.splice(3, 0, "m", "n",88);
+    //console.log(arr);
+    //console.log(insertArr);
+    //替换
+    // var replaceArr = arr.splice(1, 2, "x", "y", "z");
+   // var replaceArr = arr.splice(0)
+   // console.log(arr);
+   // console.log(replaceArr);
+
+    //检测7在数组中出现的位置，检测的是第一个7
+    var nums = [1, 7, 5, 7, 8, 1, 6, 9];
+    //var pos = nums.indexOf(7, 2);
+    var pos = nums.lastIndexOf(1);
+    console.log(pos)
+
+    //封装一个方法实现indexOf的功能
+    function ArrayIndexOf(arr,value) {
+        //检测value在arr中的出现的位置
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    var pos2 = ArrayIndexOf(nums, 1);
+    console.log(pos2)
+</script>

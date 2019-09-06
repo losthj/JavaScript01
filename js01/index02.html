@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>算数操作符</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    算数操作符
+</body>
+</html>
+<script>
+    //var num1 = 10, num2 = 20;  //返回数字为number
+    //var num1 = 10, num2 = "acb"; //返回NaN
+    //var num1 = 10, num2 = "5";  //计算结果5  //隐式类型转换
+
+    //var num1 = 10, num2 = 5, num3 =++num1 + num2;  //++num1  num1= num1+1
+    var num1 = 10, num2 = 5, num3 = num1++ - num2, x1 = 20, x2 = 30, x3 = --x1 + x2--;
+    console.log(num1); //11   //11
+    console.log(num3); //16   //5
+
+    console.log(x1); //19
+    console.log(x2); //29
+    console.log(x3); //19 + 30 = 49
+
+</script>
