@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="box">
+        请输入搜索关键字：
+        <input type="text" placeholder="请输入搜索关键字" id="key" value="" />
+        <input type="button" value="搜索" id="search" />
+    </div>
+    <a href="#" id="go">跳转</a>
+    <a href="index07.html">index07.html</a>
+    <script>
+        //给按钮绑定事件
+        document.getElementById("search").onclick = function () {
+            //获取搜索关键字并对它进行编码
+            var key = encodeURIComponent(document.getElementById("key").value);
+            //跳转到指定页面
+            location.href = 'newopen.html?search_key=' + key;
+        }
+        var sea = "搜索"
+        document.getElementById("go").href = "index01.html?key=" + encodeURI(sea);
+    </script>
+</body>
+</html>

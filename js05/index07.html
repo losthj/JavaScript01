@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p>这是index7.html</p>
+    <p>
+        <a href="index08.html">index08.html</a>
+    </p>
+    <p>
+        <input type="button" value="后退" id="btn" />
+    </p>
+    <p>
+        <input type="button" value="前进" id="btn2" />
+    </p>
+    <script>
+        var btn = document.getElementById("btn");
+
+        //点击btn按钮时回到历史记录的上一步
+        btn.onclick = function () {
+           // history.back();
+            history.go(-1);
+        }
+        btn2.onclick = function () {
+            history.forward();
+            //history.go(1);
+        }
+    </script>
+</body>
+</html>

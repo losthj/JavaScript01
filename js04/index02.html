@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        .on{border-bottom:1px solid green}
+        .current{background:#ccc;color:#f00}
+    </style>
+</head>
+<body>
+    <div>获取属性+设置属性</div>
+    <p id="text" class="text" align="center" data-type="title">
+        文字
+    </p>
+    <input type="text" name="user" value="user" id="user" validate="true" />
+</body>
+</html>
+<script>
+    var p = document.getElementById("text");
+    console.log(p.id)  //id的属性  标准的原生属性都课可以获取
+    console.log(p.class) //undefined
+    console.log(p.getAttribute("data-type")); //获取class和自己定义属性
+
+    var user = document.getElementById("user");
+    console.log(user.value);
+    console.log(user.getAttribute("validate"));
+
+    //给p设置一个data-color的属性
+    p.setAttribute("data-color", "red");
+    //给input设置一个isRed的属性
+    user.setAttribute("isRed", "false")
+
+    //删除属性
+    p.removeAttribute("align");
+</script>

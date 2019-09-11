@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>location.href</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <input type="button" value="刷新" id="reload" />
+    <script>
+        //setTimeout(function () {
+        //    //location.href = "newopen.html";
+        //    //window.location = "newopen.html";
+
+        //    location.replace("index04.html")  
+        //}, 1000)
+
+        document.getElementById("reload").onclick = function () {
+            // location.reload();
+            location.reload(true);
+        }
+    </script>
+</body>
+</html>

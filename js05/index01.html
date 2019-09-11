@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <div id="box">
+        <span>iphone6s</span>
+        <input type="button"  value="删除" id="btn" />
+    </div>
+
+
+    <script>
+        var age = 15;
+        // window.age = 15;
+        function sayAge() {
+            alert('我' + age);
+        }
+        //声明一个全局变量
+        window.username = "marry";  //var username = "marry"
+        //声明一个全局方法
+        window.sayNmae = function () {
+            alert("我是" + this.username);
+        }
+        //sayAge();
+        //window.sayNmae();
+
+        //confirm()
+        //获取按钮
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            //弹出确认对话框
+            var result = window.confirm("您确定要删除吗？删除之后\n该信息将不可恢复！");
+            console.log(result);
+            if (result) {
+                document.getElementById("box").style.display = "none";
+            }
+        }
+
+        //弹出输入框
+        //var message = prompt("请输入您的星座", "天蝎座");
+        //console.log(message);
+    </script>
+</body>
+</html>

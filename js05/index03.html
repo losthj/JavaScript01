@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>setTimeout和setInterval</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <script>
+        // setTimeout("alert('hello')", 4000);
+
+       // var fuCall = function () {
+       //     alert("world")
+       // }
+       // setTimeout(fuCall, 5000);
+
+       //var timeout1 = setTimeout(function () {
+       //     alert("hello2")
+       // }, 2000)
+
+       // //取消超时调用
+       //clearTimeout(timeout1);
+
+
+        //var intervalid = setInterval(function () {
+        //    console.log("您好")
+        //}, 1000)
+
+        ////10秒之后停止打印
+        //setTimeout(function () {
+        //    clearInterval(intervalid);
+        //}, 10000)
+
+        var num = 1,
+            max = 10,
+            timer = null;  //null释放内存
+        //每隔1秒钟num递增一次，直到num的值等于max
+        //timer = setInterval(function () {
+        //    console.log(num)   //每隔1秒钟打印值 从1
+        //    num++;
+        //    if (num > max) {
+        //        clearInterval(timer)
+        //    }
+        //},1000)
+
+        //使用超时调用实现
+        function inCreamentNum() {
+            console.log(num)
+            num++;
+            if (num <= max) {
+                setTimeout(inCreamentNum, 1000);
+            } else {
+                clearTimeout(timer);
+            }
+        }
+        timer = setTimeout(inCreamentNum, 1000);
+    </script>
+</body>
+</html>

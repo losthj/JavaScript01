@@ -2,10 +2,77 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>javascript DOM</title>
+    <title>javascript DOM(获取元素)</title>
 	<meta charset="utf-8" />
+    
 </head>
 <body>
+    <div class="box" id="box" >
+        元素1
+    </div>
+    <ul id="list">
+        <li><i>前端开发</i></li>
+        <li class="on"><b>服务器端开发</b></li>
+        <li>UI设计</li>
+    </ul>
 
+    <ul id="list1">
+        <li>前端开发</li>
+        <li>服务器端开发</li>
+        <li>UI设计</li>
+        <li>UI设计3</li>
+        <li>UI设计4</li>
+    </ul>
+    <ol>
+        <li>javascript原生</li>
+        <li>javascript框架</li>
+    </ol>
+
+  
 </body>
 </html>
+<script>
+    //获取id为box的这个元素的位置颜色，属性是减号连接的复合形式时
+    //必须要转账为驼峰形式
+    var box = document.getElementById("box");
+    box.style.color = "red";
+    box.style.fontWeight="bold"
+   // console.log(box);
+
+    //获取页面中所有的li
+    //var lis = document.getElementsByTagName("li");
+    //console.log(lis.length)
+
+    //获取id为list1下所以的li
+    var lis2 = document.getElementById("list1").getElementsByTagName("li");
+    //lis2.style.color = "red";  //报错
+    //遍历每一个li
+    //for (var i = 0, len = lis2.length; i < len; i++) {
+    //    console.log(lis2[i])
+    //    lis2[i].style.color = "blue";
+    //    if(i==0){
+    //        lis2[i].style.backgroundColor="#ccc";
+    //    }else if(i==1){
+    //        lis2[i].style.backgroundColor="#666";
+    //    }else if(i==2){
+    //        lis2[i].style.backgroundColor="#999";
+    //    } else {
+    //        lis2[i].style.backgroundColor="#333";
+    //    }
+    //}
+    //console.log(lis2);
+
+
+    var lis = document.getElementById("list").getElementsByTagName("li");
+    for (var i = 0, len = lis.length; i < len; i++) {
+        //console.log(lis[i].innerHTML);
+        lis[i].innerHTML += '程序';
+        lis[1].className = "current"; //原来的calss会被替换掉
+    }
+
+    //打印元素的class
+  //  console.log(document.getElementById("box").className)
+
+
+  
+</script>
