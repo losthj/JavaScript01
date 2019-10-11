@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //值类型
+        var a = 100;
+        var b = a;
+         a =200;
+        console.log(b) //100
+
+        //引用类型
+        var  a = {age:20};
+        var b = a;
+        b.age = 21;
+        console.log(a.age) //21
+
+        //typeof运算符
+        // console.log(typeof undefined) //undefind
+        // console.log(typeof 'abc') //string
+        // console.log(typeof 122 )//number
+        // console.log(typeof true) //boolean
+        // console.log(typeof {}  )//object
+        // console.log(typeof []  )//object 
+        // console.log(typeof null) //object  //空
+        // console.log(typeof console.log) //function
+
+        //字符串拼接
+        var a1 = 100 +10;  //100
+        var b1 = 100 + '10' //10010
+        // console.log(a1)
+        // console.log(b1)
+
+        //逻辑运算符
+        console.log(10 && 0)  //0
+        console.log('' || 'abc') //abc
+        console.log(!window.abc) //true
+            //判断一个变量会被当true还是false
+        var a2 = 100;
+        console.log(!!a2)   //false
+
+        // if(obj.a == null){
+        //     //这里相当于 obj.a === null || obj.a === undefined,简写形式
+        //     //这是jquery源码推荐的写法
+        // }
+    </script>
+</body>
+</html>

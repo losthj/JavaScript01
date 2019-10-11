@@ -98,6 +98,11 @@ body {
 }
 
 /*导航菜单*/
+.menu{
+    width:974px;
+    height:454px;
+    position:relative;
+}
 .menu_box{
     width:244px;
     height:460px;

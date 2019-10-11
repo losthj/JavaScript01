@@ -80,34 +80,25 @@ function slieImg() {
             menuitems[idx].style.background = "rgba(0,0,0,0.1)"
             innerBox[idx].style.display = 'block';
         }
-        //menuitems[m].onmouseout = function () {
-        //    alert("1")
-        //    //this.style.background = "none"
-        //}
- 
 
     }
     menu.onmouseout = function () {
         submenu.className = 'sub-menu hide';
-        //for (var y = 0; y < menuitems.length; y++) {
-        //    menuitems[y].style.background = "none";
-        //}
     }
     
     submenu.onmouseover = function () {
         this.className = "sub-menu";
-        //for (var y = 0; y < menuitems.length; y++) {
-        //    menuitems[y].style.background = "rgba(0,0,0,0.1)";
-        //}
-      
     }
-    submenu.onmouseout = function () {
+    submenu.onmouseout = function (ev) {
+        var oEvent = ev || event;
+        var oTo = oEvent.toElement || oEvent.relatedTarget;
+        if (this.contains(oTo)) return;
         this.className = "sub-menu hide";
-        //for (var y = 0; y < menuitems.length; y++) {
-        //    menuitems[y].style.background = "none";
-        //}
+        for (var y = 0; y < menuitems.length; y++) {
+            menuitems[y].style.background = "none";
+        }
     }
- 
+
 }
 
   
