@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作用域</title>
+</head>
+<body>
+    <script>
+        //无块级作用域
+        if(true){
+            var name = 'zhangsan'
+        }    
+        console.log(name)
+        //函数和全局作用域
+        // var a = 100;
+        // function fn(){
+        //     var a = 200;
+        //     console.log('fn',a)
+        // }
+        // console.log('global',a)
+        // fn()
+
+        //作用域链
+        var a = 100;
+        function fn(){
+            var b = 200;
+            //当前作用域没有定义的变量，即’自由变量‘
+            console.log(a)
+            console.log(b)
+        }
+        //fn()
+
+        //闭包
+        // function F1(){
+        //     var a =100;
+        //     //返回一个函数（函数作为返回值）
+        //     return function(){
+        //         console.log(a)
+        //     }
+        // }
+        // //f1得到一个函数
+        // var f1 = F1();
+        // var a = 200;
+        // f1()
+
+        function F1(){
+            var a =100;
+            //返回一个函数（函数作为返回值）
+            return function(){
+                console.log(a) //自由变量，父作用域寻找
+            }
+        }
+        //f1得到一个函数
+        var f1 = F1();
+        function F2(fn){
+            var a = 200;
+            fn()//函数的参数传递
+        }
+        F2(f1)
+    </script>
+</body>
+</html>

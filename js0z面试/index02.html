@@ -12,16 +12,16 @@
 </html>
 <script>
     //构造函数
-    function Foo(name,age){
-        this.name = name;
-        this.age = age;
-        this.class = 'class-1';
-        //return this  //默认有这一行
-    }
-    var f = new Foo('zhangsan',30);
-    console.log(f)
-    var f1 = new Foo('huangjian',29);  //创建多个对象
-    console.log(f1)
+    // function Foo(name,age){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.class = 'class-1';
+    //     //return this  //默认有这一行
+    // }
+    // var f = new Foo('zhangsan',30);
+    // console.log(f)
+    // var f1 = new Foo('huangjian',29);  //创建多个对象
+    // console.log(f1)
 
      //构造函数 -扩展
      var a = {} //其实是var a = new Object()的语法
@@ -41,4 +41,23 @@
         //console.log(fn.prototype)
         // console.log(obj.__proto__ === Object.prototype)  //true
         // console.log(arr.__proto__ === Array.prototype)   //true
+
+        //原型示例
+        function Foo(name,age){
+            this.name = name
+        }
+        Foo.prototype.alerName = function(){
+            alert(this.name)
+        }
+        //创建示例
+        var f = new Foo('zhangsan')
+        f.printName = function(){
+            console.log(this.name)
+        }
+
+        //测试
+        // f.printName();
+        // f.alerName();
+           f.toString();  //要去f.__proto__.__proto__中查找
+        
 </script>

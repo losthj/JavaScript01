@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">111</div>
+</body>
+</html>
+<script>
+    // function Elem(id){
+    //     this.elem = document.getElementById(id);
+    // }
+
+    // Elem.prototype.html = function(val){
+    //     var elem = this.elem;
+    //     if (val){
+    //         elem.innerHTML = val;
+    //         return this  //链式操作
+    //     }else{
+    //         return elem.innerHTML
+    //     }
+    // }
+    // Elem.prototype.on = function(type,fn){
+    //     var elem = this.elem
+    //     elem.addEventListener(type,fn)
+    //     //return this
+    // }
+    // var div1 = new Elem('div1');
+
+    // //console.log(div1.html())
+    // div1.html('<p>hello hj</p>');
+    // div1.on('click',function(){
+    //     alert('clicked')
+    // })
+
+  //原型链的示例
+    function Elemen (id){
+        this.elemen = document.getElementById(id);
+    }
+    Elemen.prototype.html = function(val){
+        var elemen = this.elemen;
+        if(val){
+            elemen.innerHTML = val;
+            return this 
+        }else{
+            return elemen.innerHTML
+        }
+    }
+    Elemen.prototype.on = function(type,fn){
+        var elemen = this.elemen;
+        elemen.addEventListener(type,fn);
+        return this;
+    }
+    
+    var div1 = new Elemen('div1');
+    div1.html('<p>huangjian</p>');
+    div1.on('click',function(){
+        alert("1");
+    })
+
+</script>

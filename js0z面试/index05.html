@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数声明</title>
+</head>
+<body>
+    <script>
+        function fn (){
+            //声明
+        }
+
+        var fn = function(){
+            //表达
+        }
+        console.log(a) //undefind
+        var a = 100;
+
+        fn('zhangsan');
+        function fn(name){
+            console.log(name)
+        }
+
+
+        //this
+        var a = {
+            name:'A',
+            fn:function(){
+                console.log(this.name)
+            }
+        }
+       // a.fn()  //this === a
+        //a.fn.call({name:'B'})  //this==={name:'B'}
+        //var fn1 = a.fn
+        //fn1()  //this ==== window
+
+        function Foo(name){
+            this.name = name;
+        }
+        var f= new Foo('zhangsan');
+        var obj = {
+            name:'A',
+            printName:function(){
+                console.log(this.name)
+            }
+        }
+        obj.printName();
+    </script>
+</body>
+</html>

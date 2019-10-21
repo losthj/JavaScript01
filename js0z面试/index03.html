@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型链的列子</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //动物
+    function Animal(){
+        this.eat = function(){
+            console.log('animal eat')
+        }
+    }
+    //gou
+    function Dog(){
+        this.bark = function(){
+            console.log('dog bark')
+        }
+    }
+    Dog.prototype = new Animal()
+    
+    var hasiqi = new Dog();
+    //hasiqi.eat();
+</script>
